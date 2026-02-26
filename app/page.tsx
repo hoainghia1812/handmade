@@ -1,38 +1,10 @@
 import Image from "next/image";
-import ThemeToggle from "./components/ThemeToggle";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
     <>
-      {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-brand-brown/10 dark:border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex justify-between items-center h-24">
-            <div className="hidden md:flex space-x-10 text-sm tracking-widest uppercase font-medium">
-              <a className="hover:text-primary transition-colors" href="#">Home</a>
-              <a className="hover:text-primary transition-colors" href="#shop">Shop</a>
-              <a className="hover:text-primary transition-colors" href="#story">Our Story</a>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="text-3xl font-display font-bold tracking-tighter mb-0 leading-none">MUSH &amp; CO.</div>
-              <div className="text-[10px] tracking-[0.3em] uppercase opacity-80 mt-1">Handmade Luxury</div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <button className="hover:text-primary transition-colors">
-                <span className="material-symbols-outlined">search</span>
-              </button>
-              <button className="hover:text-primary transition-colors relative">
-                <span className="material-symbols-outlined">shopping_bag</span>
-                <span className="absolute -top-1 -right-1 bg-primary text-white text-[9px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
-              </button>
-              <ThemeToggle />
-              <button className="md:hidden">
-                <span className="material-symbols-outlined">menu</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-24">
