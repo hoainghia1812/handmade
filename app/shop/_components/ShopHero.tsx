@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ShopHero() {
   return (
-    <section className="relative h-[62vh] min-h-[420px] flex items-end overflow-hidden">
+    <section className="relative h-[50vh] sm:h-[55vh] md:h-[62vh] min-h-[280px] sm:min-h-[360px] md:min-h-[420px] flex items-end overflow-hidden">
       <div className="absolute inset-0">
         <Image
           fill
@@ -14,11 +14,14 @@ export default function ShopHero() {
         <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16">
-        <h1 className="font-display text-6xl md:text-8xl text-white font-medium tracking-tight animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.25s_both]">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-8 sm:pb-12 md:pb-16">
+        <p className="text-primary tracking-[0.4em] uppercase text-[10px] sm:text-xs font-semibold mb-2 sm:mb-3 animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
+          Mush &amp; Co.
+        </p>
+        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white font-medium tracking-tight animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.25s_both]">
           The Collection
         </h1>
-        <p className="text-white/70 mt-4 text-sm tracking-widest max-w-md animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.4s_both]">
+        <p className="text-white/70 mt-2 sm:mt-4 text-xs sm:text-sm tracking-widest max-w-sm sm:max-w-md animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.4s_both]">
           Handcrafted luxury for the modern home — each piece a work of art.
         </p>
       </div>

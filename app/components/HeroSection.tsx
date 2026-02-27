@@ -20,7 +20,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
 
       {/* Parallax background */}
       <div
@@ -36,24 +36,24 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Hero content — fades + rises on mount */}
-      <div className="relative z-10 text-center text-white px-6 animate-[heroIn_1.2s_cubic-bezier(0.22,1,0.36,1)_0.2s_both]">
-        <h2 className="font-display italic text-2xl md:text-3xl mb-4 text-primary">
+      {/* Hero content */}
+      <div className="relative z-10 text-center text-white px-4 sm:px-6 animate-[heroIn_1.2s_cubic-bezier(0.22,1,0.36,1)_0.2s_both]">
+        <h2 className="font-display italic text-lg sm:text-2xl md:text-3xl mb-3 md:mb-4 text-primary">
           Artisanship in every stitch
         </h2>
-        <h1 className="font-display text-5xl md:text-8xl font-medium tracking-tight mb-8">
+        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 md:mb-8">
           The Luxury of Giving
         </h1>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
           <a
-            className="bg-primary hover:bg-opacity-90 text-white px-10 py-4 text-sm tracking-widest uppercase transition-all duration-300"
+            className="w-full sm:w-auto bg-primary hover:bg-opacity-90 text-white px-8 py-3 md:px-10 md:py-4 text-xs sm:text-sm tracking-widest uppercase transition-all duration-300"
             href="/shop"
           >
             Shop Collection
           </a>
           <a
-            className="border border-white/40 hover:border-white text-white px-10 py-4 text-sm tracking-widest uppercase transition-all duration-300 bg-white/5 backdrop-blur-sm"
-            href="#story"
+            className="w-full sm:w-auto border border-white/40 hover:border-white text-white px-8 py-3 md:px-10 md:py-4 text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 bg-white/5 backdrop-blur-sm"
+            href="/#story"
           >
             Our Process
           </a>
@@ -62,7 +62,7 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
+        className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
         style={{ opacity: Math.max(0, 1 - scrollY / 200) }}
       >
         <span className="material-symbols-outlined text-white opacity-50">

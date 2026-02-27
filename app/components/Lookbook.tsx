@@ -7,11 +7,11 @@ export default function Lookbook() {
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <section className="pb-24 px-6 lg:px-12">
+    <section className="pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-12 gap-6 h-[800px]">
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 md:gap-6 h-[360px] sm:h-[480px] md:h-[600px] lg:h-[800px]">
 
-          {/* Main feature image — slide from left */}
+          {/* Main feature image */}
           <div className={`reveal from-left md:col-span-8 relative overflow-hidden group ${inView ? "in-view" : ""}`}>
             <Image
               fill
@@ -20,19 +20,19 @@ export default function Lookbook() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1cM0elRRIY9Xq3x0DnlBpOsBvSwRndN7aI0ZiGyOH0iRd6S8rXFHnwVuWcaYuY7QcjIp_Ke01vcWPf7km3EClEFe_v6RpAeRWpepN43Amc33NiSEpPOOHaw2bt5ztx7ZYHfMX_ANn8AmX3iBV2cQT-LMShhNKeFpOV7oxjEX5lxRrBHgurHQQjOKzX3F-SZnLeBv2lcncOJttrS4tOFg2DtvKMcho1zJ3K14CXJgkHn_zlihp-lIIaT7VOSkFqzQVHmSsPt9GqSQ"
             />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
-            <div className="absolute inset-12 flex flex-col justify-end text-white">
-              <h3 className="font-display text-4xl mb-4">Curated Living Spaces</h3>
-              <p className="max-w-md mb-8 opacity-80">
+            <div className="absolute inset-4 sm:inset-6 md:inset-12 flex flex-col justify-end text-white">
+              <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2 md:mb-4">Curated Living Spaces</h3>
+              <p className="max-w-xs sm:max-w-md mb-4 md:mb-8 opacity-80 text-xs sm:text-sm md:text-base hidden sm:block">
                 A selection of our favorite pieces styled in modern, minimalist environments.
               </p>
-              <a className="text-xs tracking-[0.2em] uppercase underline underline-offset-8" href="#">
+              <a className="text-[10px] sm:text-xs tracking-[0.2em] uppercase underline underline-offset-8" href="#">
                 Shop Lookbook
               </a>
             </div>
           </div>
 
-          {/* Side detail images — stagger from right */}
-          <div className="md:col-span-4 grid grid-rows-2 gap-6">
+          {/* Side detail images */}
+          <div className="md:col-span-4 grid grid-rows-2 gap-3 sm:gap-4 md:gap-6">
             <div className={`reveal from-right reveal-delay-200 relative overflow-hidden group ${inView ? "in-view" : ""}`}>
               <Image
                 fill

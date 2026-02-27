@@ -8,9 +8,9 @@ const ZALO_URL = `https://zalo.me/${ZALO_PHONE}`;
 
 export default function ChatButton() {
   return (
-    <div className="fixed bottom-8 right-8 z-40 group flex flex-col items-end gap-2">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-40 group flex flex-col items-end gap-1.5 sm:gap-2">
       {/* Tooltip */}
-      <span className="opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-200 bg-brand-brown text-background-light text-[10px] tracking-[0.2em] uppercase px-3 py-1.5 pointer-events-none whitespace-nowrap">
+      <span className="opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-200 bg-brand-brown text-background-light text-[9px] sm:text-[10px] tracking-[0.2em] uppercase px-2 py-1 sm:px-3 sm:py-1.5 pointer-events-none whitespace-nowrap">
         Chat Zalo
       </span>
 
@@ -19,9 +19,9 @@ export default function ChatButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Liên hệ qua Zalo"
-        className="bg-primary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 hover:shadow-primary/30 transition-all duration-300"
+        className="bg-primary text-white w-12 h-12 sm:w-13 sm:h-13 md:w-14 md:h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 hover:shadow-primary/30 transition-all duration-300"
       >
-        <span className="material-symbols-outlined">chat_bubble</span>
+        <span className="material-symbols-outlined text-lg sm:text-xl">chat_bubble</span>
       </a>
     </div>
   );
