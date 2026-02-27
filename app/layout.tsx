@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
+import "material-symbols/outlined.css";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -27,17 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
-        />
-      </head>
       <body
         className={`${cormorantGaramond.variable} ${montserrat.variable} bg-background-light dark:bg-background-dark text-brand-brown dark:text-background-light font-sans transition-colors duration-300`}
       >
         {children}
       </body>
     </html>
+
   );
 }

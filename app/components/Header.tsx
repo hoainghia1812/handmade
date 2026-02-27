@@ -1,35 +1,71 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const pathname = usePathname();
+  const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const onScroll = () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      rafRef.current = requestAnimationFrame(() => setScrollY(window.scrollY));
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, []);
+
+  // Đóng mobile menu khi chuyển trang
+  useEffect(() => {
+    const timer = setTimeout(() => setMenuOpen(false), 0);
+    return () => clearTimeout(timer);
+  }, [pathname]);
+
+  const scrollProgress = Math.min(scrollY / 120, 1);
+  const bgOpacity = scrollProgress * 0.95;
+  const blurAmount = scrollProgress * 16;
+  const shadowOpacity = scrollProgress * 0.08;
+  const borderOpacity = scrollProgress * 0.1;
 
   const closeMenu = () => setMenuOpen(false);
 
   const navLinks = [
-    { label: "Home", href: "#" },
-    { label: "Shop", href: "#shop" },
-    { label: "Our Story", href: "#story" },
+    { label: "Home",      href: "/"         },
+    { label: "Shop",      href: "/shop"      },
+    { label: "Our Story", href: "/#story"    },
   ];
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href.split("#")[0]) && href.split("#")[0] !== "/";
+  };
 
   return (
     <>
       <nav
-        className={`fixed w-full z-50 transition-all duration-300 border-b border-brand-brown/10 dark:border-white/10 ${
-          scrolled
-            ? "bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md shadow-sm"
-            : "bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md"
-        }`}
+        className="fixed w-full z-50"
+        style={{
+          boxShadow: `0 1px 32px 0 rgba(0,0,0,${shadowOpacity})`,
+          borderBottom: `1px solid rgba(84,61,45,${borderOpacity})`,
+        }}
       >
+        {/* Cinematic background layer — fades in on scroll */}
+        <div
+          className="absolute inset-0 -z-10 bg-background-light dark:bg-background-dark"
+          style={{
+            opacity: bgOpacity,
+            backdropFilter: `blur(${blurAmount}px) saturate(${1 + scrollProgress * 0.4})`,
+            WebkitBackdropFilter: `blur(${blurAmount}px) saturate(${1 + scrollProgress * 0.4})`,
+          }}
+        />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex justify-between items-center h-20 md:h-24">
 
@@ -38,13 +74,15 @@ export default function Header() {
               {/* Desktop nav links */}
               <div className="hidden md:flex space-x-8 lg:space-x-10 text-sm tracking-widest uppercase font-medium">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.label}
-                    className="hover:text-primary transition-colors"
                     href={link.href}
+                    className={`hover:text-primary transition-colors ${
+                      isActive(link.href) ? "text-primary" : ""
+                    }`}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
 
@@ -61,14 +99,14 @@ export default function Header() {
             </div>
 
             {/* CENTER — brand logo */}
-            <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
+            <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
               <div className="text-2xl sm:text-3xl font-display font-bold tracking-tighter leading-none">
                 MUSH &amp; CO.
               </div>
               <div className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase opacity-80 mt-1">
                 Handmade Luxury
               </div>
-            </div>
+            </Link>
 
             {/* RIGHT — icons */}
             <div className="flex items-center space-x-3 sm:space-x-5">
@@ -91,14 +129,16 @@ export default function Header() {
         >
           <div className="px-6 py-6 flex flex-col space-y-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 onClick={closeMenu}
-                className="text-sm tracking-widest uppercase font-medium py-3 border-b border-brand-brown/10 dark:border-white/10 hover:text-primary transition-colors last:border-0"
+                className={`text-sm tracking-widest uppercase font-medium py-3 border-b border-brand-brown/10 dark:border-white/10 hover:text-primary transition-colors last:border-0 ${
+                  isActive(link.href) ? "text-primary" : ""
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
