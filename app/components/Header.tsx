@@ -40,7 +40,7 @@ export default function Header() {
   const navLinks = [
     { label: "Home",      href: "/"         },
     { label: "Shop",      href: "/shop"      },
-    { label: "Our Story", href: "/#story"    },
+    { label: "Our Story", href: "/story"     },
   ];
 
   const isActive = (href: string) => {
@@ -112,9 +112,6 @@ export default function Header() {
             <div className="flex items-center space-x-3 sm:space-x-5">
               <button className="hover:text-primary transition-colors relative p-1" aria-label="Cart">
                 <span className="material-symbols-outlined">shopping_bag</span>
-                <span className="absolute top-0 right-0 bg-primary text-white text-[9px] w-4 h-4 flex items-center justify-center rounded-full">
-                  2
-                </span>
               </button>
               <ThemeToggle />
             </div>
