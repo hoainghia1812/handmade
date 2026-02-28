@@ -15,9 +15,6 @@ export default function ShopHero() {
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-8 sm:pb-12 md:pb-16">
-        <p className="text-primary tracking-[0.4em] uppercase text-[10px] sm:text-xs font-semibold mb-2 sm:mb-3 animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
-          Mush &amp; Co.
-        </p>
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white font-medium tracking-tight animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.25s_both]">
           The Collection
         </h1>
