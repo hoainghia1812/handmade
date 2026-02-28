@@ -6,7 +6,7 @@ export default function CraftBanner() {
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <section className="bg-brand-brown dark:bg-neutral-900 py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden">
+    <section className="bg-brand-brown dark:bg-neutral-900 py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-12 overflow-x-hidden">
       <div
         ref={ref}
         className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12"

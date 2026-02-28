@@ -6,7 +6,7 @@ export default function Testimonial() {
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12 text-center bg-background-light dark:bg-background-dark">
+    <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12 text-center bg-background-light dark:bg-background-dark overflow-hidden">
       <div ref={ref} className="max-w-4xl mx-auto">
         <span className={`reveal from-scale ${inView ? "in-view" : ""} material-symbols-outlined text-primary text-3xl sm:text-4xl md:text-5xl mb-6 md:mb-8 block`}>
           format_quote

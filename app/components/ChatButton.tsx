@@ -14,7 +14,7 @@ export default function ChatButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Liên hệ qua Zalo"
-        className="bg-primary text-white w-12 h-12 sm:w-13 sm:h-13 md:w-14 md:h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 hover:shadow-primary/30 transition-all duration-300"
+        className="bg-primary text-white w-12 h-12 md:w-14 md:h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 hover:shadow-primary/30 transition-all duration-300"
       >
         <span className="material-symbols-outlined text-lg sm:text-xl">chat_bubble</span>
       </a>

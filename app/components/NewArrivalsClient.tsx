@@ -15,7 +15,7 @@ export default function NewArrivalsClient({ products }: NewArrivalsClientProps) 
   const { ref: gridRef, inView: gridInView }       = useInView<HTMLDivElement>();
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-12" id="shop">
+    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden" id="shop">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading row */}

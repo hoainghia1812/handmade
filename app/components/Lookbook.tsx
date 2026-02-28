@@ -7,7 +7,7 @@ export default function Lookbook() {
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <section className="pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-12">
+    <section className="pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 md:gap-6 h-[360px] sm:h-[480px] md:h-[600px] lg:h-[800px]">
 

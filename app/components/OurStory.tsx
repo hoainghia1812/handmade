@@ -7,7 +7,7 @@ export default function OurStory() {
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-[#EBE4D5] dark:bg-neutral-900" id="story">
+    <section className="py-16 sm:py-20 md:py-24 bg-[#EBE4D5] dark:bg-neutral-900 overflow-hidden" id="story">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
 
