@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${cormorantGaramond.variable} ${montserrat.variable} bg-background-light dark:bg-background-dark text-brand-brown dark:text-background-light font-sans transition-colors duration-300`}
+        className={`${cormorantGaramond.variable} ${montserrat.variable} bg-background-light dark:bg-background-dark text-brand-brown dark:text-background-light font-sans transition-colors duration-300 overflow-x-hidden`}
       >
         {children}
       </body>

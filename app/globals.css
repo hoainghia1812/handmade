@@ -36,14 +36,14 @@
 /* ── Scroll Reveal ─────────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(48px);
+  transform: translateY(40px);
   transition:
     opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.reveal.from-left  { transform: translateX(-64px); }
-.reveal.from-right { transform: translateX(64px); }
-.reveal.from-scale { transform: scale(0.9) translateY(24px); }
+.reveal.from-left  { transform: translateX(-40px); }
+.reveal.from-right { transform: translateX(40px); }
+.reveal.from-scale { transform: scale(0.92) translateY(20px); }
 
 .reveal.in-view {
   opacity: 1;

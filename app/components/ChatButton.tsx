@@ -9,11 +9,6 @@ const ZALO_URL = `https://zalo.me/${ZALO_PHONE}`;
 export default function ChatButton() {
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-40 group flex flex-col items-end gap-1.5 sm:gap-2">
-      {/* Tooltip */}
-      <span className="opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-200 bg-brand-brown text-background-light text-[9px] sm:text-[10px] tracking-[0.2em] uppercase px-2 py-1 sm:px-3 sm:py-1.5 pointer-events-none whitespace-nowrap">
-        Chat Zalo
-      </span>
-
       <a
         href={ZALO_URL}
         target="_blank"
