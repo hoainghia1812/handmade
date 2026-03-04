@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import CategoryGrid from "../components/CategoryGrid";
 import NewArrivals from "../components/NewArrivals";
@@ -11,7 +10,6 @@ import ChatButton from "../components/ChatButton";
 export default function Home() {
   return (
     <>
-      <Header />
       <HeroSection />
       <CategoryGrid />
       <NewArrivals />

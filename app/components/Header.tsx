@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import type { Locale } from "@/i18n/config";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
@@ -10,6 +12,10 @@ export default function Header() {
   const [scrollY, setScrollY] = useState(0);
   const pathname = usePathname();
   const rafRef = useRef<number | null>(null);
+  const locale = useLocale() as Locale;
+  const t = useTranslations("common");
+
+  const basePath = `/${locale}`;
 
   useEffect(() => {
     const onScroll = () => {
@@ -38,14 +44,25 @@ export default function Header() {
   const closeMenu = () => setMenuOpen(false);
 
   const navLinks = [
-    { label: "Home",      href: "/"         },
-    { label: "Shop",      href: "/shop"      },
-    { label: "Our Story", href: "/story"     },
+    { label: t("header.home"), href: `${basePath}` },
+    { label: t("header.shop"), href: `${basePath}/shop` },
+    { label: t("header.story"), href: `${basePath}/story` },
   ];
 
+  const nextLocale: Locale = locale === "en" ? "vi" : "en";
+  const nextLocaleLabel = nextLocale === "en" ? "English" : "Tiếng Việt";
+
+  const localizedPathname = pathname || "/";
+  const nextLocalePath = localizedPathname.replace(
+    /^\/(en|vi)(?=\/|$)/,
+    `/${nextLocale}`
+  );
+
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    return pathname.startsWith(href.split("#")[0]) && href.split("#")[0] !== "/";
+    // Trang home: chỉ active khi path khớp đúng /{locale}
+    if (href === basePath) return pathname === basePath;
+    // Các trang khác: active nếu path bắt đầu bằng href
+    return pathname.startsWith(href);
   };
 
   return (
@@ -75,11 +92,12 @@ export default function Header() {
               <div className="hidden md:flex space-x-8 lg:space-x-10 text-sm tracking-widest uppercase font-medium">
                 {navLinks.map((link) => (
                   <Link
-                    key={link.label}
+                    key={link.href}
                     href={link.href}
                     className={`hover:text-primary transition-colors ${
                       isActive(link.href) ? "text-primary" : ""
                     }`}
+                    prefetch
                   >
                     {link.label}
                   </Link>
@@ -99,7 +117,10 @@ export default function Header() {
             </div>
 
             {/* CENTER — brand logo */}
-            <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <Link
+              href={basePath}
+              className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center"
+            >
               <div className="text-2xl sm:text-3xl font-display font-bold tracking-tighter leading-none">
                 MUSH &amp; CO.
               </div>
@@ -108,9 +129,20 @@ export default function Header() {
               </div>
             </Link>
 
-            {/* RIGHT — icons */}
+            {/* RIGHT — icons (language chip chỉ desktop) */}
             <div className="flex items-center space-x-3 sm:space-x-5">
-              <button className="hover:text-primary transition-colors relative p-1" aria-label="Cart">
+              {/* Language toggle — desktop only */}
+              <Link
+                href={nextLocalePath}
+                className="hidden md:inline-flex items-center px-3 py-1.5 border border-brand-brown/40 dark:border-white/40 rounded-full text-xs tracking-wide uppercase hover:bg-brand-brown hover:text-background-light transition-colors"
+              >
+                {nextLocaleLabel}
+              </Link>
+
+              <button
+                className="hover:text-primary transition-colors relative p-1"
+                aria-label={t("header.cart")}
+              >
                 <span className="material-symbols-outlined">shopping_bag</span>
               </button>
               <ThemeToggle />
@@ -127,16 +159,27 @@ export default function Header() {
           <div className="px-6 py-6 flex flex-col space-y-1">
             {navLinks.map((link) => (
               <Link
-                key={link.label}
+                key={link.href}
                 href={link.href}
                 onClick={closeMenu}
                 className={`text-sm tracking-widest uppercase font-medium py-3 border-b border-brand-brown/10 dark:border-white/10 hover:text-primary transition-colors last:border-0 ${
                   isActive(link.href) ? "text-primary" : ""
                 }`}
+                prefetch
               >
                 {link.label}
               </Link>
             ))}
+
+            {/* Language toggle — dưới các nav trong mobile menu */}
+            <button
+              type="button"
+              onClick={() => (window.location.href = nextLocalePath)}
+              className="mt-2 text-sm tracking-widest uppercase font-medium py-3 border-b border-brand-brown/10 dark:border-white/10 hover:text-primary transition-colors flex items-center justify-between"
+            >
+              <span>{nextLocaleLabel}</span>
+              <span className="material-symbols-outlined text-base">translate</span>
+            </button>
           </div>
         </div>
       </nav>

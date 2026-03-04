@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "eyebrow": "Mush & Co. — Thành lập 2018",
+    "title": "Câu chuyện",
+    "titleEm": "của chúng tôi",
+    "subtitle": "Di sản được dệt nên từng sợi một — nơi nghề thủ công truyền thống gặp sự xa xỉ hiện đại của việc sẻ chia.",
+    "scroll": "Cuộn",
+    "alt": "Nghệ nhân đang làm việc"
+  },
+  "heritage": {
+    "chapter": "Chương 01 — Di sản",
+    "title": "Bắt nguồn từ nghề thủ công nhiều thế hệ.",
+    "p1": "Mush & Co. ra đời từ một niềm tin — sự xa xỉ đích thực là đồ làm bằng tay. Thành lập năm 2018 tại TP. Hồ Chí Minh, chúng tôi bảo tồn nghệ thuật dệt tay cổ xưa và đưa nó vào ngôi nhà hiện đại.",
+    "p2": "Mỗi tác phẩm mang ký ức của đôi tay làm ra nó. Nghệ nhân của chúng tôi kế thừa kỹ thuật từ cha mẹ và ông bà, giữ sống một truyền thống mà sản xuất hàng loạt không thể thay thế.",
+    "years": "Năm kinh nghiệm",
+    "stat1": "Tác phẩm mỗi năm",
+    "stat2": "Nghệ nhân bậc thầy",
+    "stat3": "100% thủ công"
+  },
+  "values": {
+    "eyebrow": "Điều chúng tôi đứng vững",
+    "title": "Ba trụ cột. Một lời hứa.",
+    "v1Title": "Nghệ nhân là trung tâm",
+    "v1Body": "Chúng tôi làm việc trực tiếp với thợ dệt bậc thầy — không qua trung gian. Mỗi đơn hàng bắt đầu bằng cuộc trò chuyện, phác thảo và cam kết với kỹ năng thuần túy của con người.",
+    "v2Title": "Chất liệu thuần khiết",
+    "v2Body": "Chúng tôi chỉ chọn sợi tự nhiên được chứng nhận: len Merino từ trang trại Úc có đạo đức, cashmere hạng A từ Mông Cổ, và baby alpaca từ vùng cao Peru.",
+    "v3Title": "Thiết kế vượt thời gian",
+    "v3Body": "Chúng tôi từ chối xu hướng để chọn sự trường tồn. Mỗi đường nét được tinh chỉnh qua nhiều tháng cho đến khi hoàn hảo — món đồ bạn vẫn yêu thích sau hai mươi năm."
+  },
+  "process": {
+    "chapter": "Chương 02 — Quy trình",
+    "headline": "Từ sợi vải đến bảo vật.",
+    "subline": "Hành trình 40–200 giờ, hoàn toàn bằng tay.",
+    "step1Title": "Thiết kế",
+    "step1Body": "Mỗi bộ sưu tập bắt đầu từ nghiên cứu sâu về hoa văn dệt truyền thống, chuyển thành đường nét đương đại qua nhiều tuần phác thảo và mẫu thử.",
+    "step2Title": "Nguồn nguyên liệu",
+    "step2Body": "Chúng tôi đến tận nguồn từng loại sợi — gặp nông dân, kiểm tra nguyên liệu thô, chỉ chọn những gì đạt tiêu chuẩn chất lượng và đạo đức nghiêm ngặt.",
+    "step3Title": "Chế tác",
+    "step3Body": "Nghệ nhân dành từ 40 đến 200 giờ cho một tác phẩm. Không có máy móc trong quy trình dệt — chỉ đôi tay, sự kiên nhẫn và kỹ năng kế thừa nhiều thế hệ.",
+    "step4Title": "Giao hàng",
+    "step4Body": "Mỗi tác phẩm hoàn thiện được kiểm tra bằng tay, gói trong giấy lưu trữ và gửi trong hộp quà đặc trưng — sẵn sàng trở thành một phần ngôi nhà bạn qua nhiều thế hệ."
+  },
+  "artisans": {
+    "quote": "Tôi không làm sản phẩm. Tôi dệt nên ký ức — từng sợi một, với tình yêu dành cho người sẽ đón nhận chúng.",
+    "name": "Nguyễn Thị Lan",
+    "role": "Nghệ nhân trưởng — 22 năm",
+    "stat1": "Kinh nghiệm trung bình",
+    "stat2": "Nghệ nhân bậc thầy",
+    "stat3": "Thế hệ nghề thủ công",
+    "stat4": "Xưởng do phụ nữ dẫn dắt",
+    "alt": "Nghệ nhân đang làm việc"
+  },
+  "materials": {
+    "eyebrow": "Chương 03 — Sợi vải",
+    "title": "Chỉ những nguyên liệu thô tốt nhất trên trái đất.",
+    "merino": "Len Merino",
+    "merinoOrigin": "Úc",
+    "merinoGrade": "Superfine 17.5 micron",
+    "merinoTraits": "Siêu mềm, Thoáng khí, Điều nhiệt",
+    "cashmere": "Cashmere",
+    "cashmereOrigin": "Mông Cổ",
+    "cashmereGrade": "Hạng A — 14 micron",
+    "cashmereTraits": "Cực kỳ hiếm, Nhẹ như mây, Đẹp theo năm tháng",
+    "alpaca": "Baby Alpaca",
+    "alpacaOrigin": "Peru",
+    "alpacaGrade": "Sợi lần xén đầu",
+    "alpacaTraits": "Ít gây dị ứng, Bóng như lụa, Bền",
+    "cotton": "Cotton hữu cơ",
+    "cottonOrigin": "Việt Nam",
+    "cottonGrade": "Chứng nhận GOTS",
+    "cottonTraits": "Canh tác bền vững, Chất vải sắc nét, Bền màu"
+  },
+  "cta": {
+    "eyebrow": "Bộ sưu tập đang chờ",
+    "title": "Mặc lên câu chuyện.",
+    "desc": "Mỗi tác phẩm là một chương đang chờ được sống. Xem toàn bộ bộ sưu tập đồ thủ công cao cấp.",
+    "shopCta": "Xem bộ sưu tập",
+    "storyCta": "Câu chuyện của chúng tôi",
+    "backToHome": "Về trang chủ",
+    "alt": "Bộ sưu tập"
+  }
+}

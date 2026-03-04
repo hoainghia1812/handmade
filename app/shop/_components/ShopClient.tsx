@@ -1,18 +1,19 @@
 "use client";
 
-import { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useMemo, useRef } from "react";
 import ProductCard from "../../components/ProductCard";
 import { useInView } from "../../hooks/useInView";
 import { Product } from "../../types/product";
+import { useTranslations } from "next-intl";
 
-const SORT_OPTIONS = [
-  { label: "Featured",           value: "featured"   },
-  { label: "Price: Low to High", value: "price-asc"  },
-  { label: "Price: High to Low", value: "price-desc" },
-  { label: "Newest",             value: "newest"     },
+const SORT_KEYS = [
+  { key: "featured", value: "featured" as const },
+  { key: "priceAsc", value: "price-asc" as const },
+  { key: "priceDesc", value: "price-desc" as const },
+  { key: "newest", value: "newest" as const },
 ] as const;
 
-type SortValue = typeof SORT_OPTIONS[number]["value"];
+type SortValue = (typeof SORT_KEYS)[number]["value"];
 
 const PAGE_SIZE = 16;
 
@@ -22,7 +23,12 @@ interface ShopClientProps {
 }
 
 export default function ShopClient({ initialProducts, categories }: ShopClientProps) {
+  const t = useTranslations("product");
   const [activeCategory, setActiveCategory] = useState("All");
+  const categoryList = useMemo(
+    () => ["All", ...categories.filter((c) => c !== "All")],
+    [categories]
+  );
   const [sortBy, setSortBy]                 = useState<SortValue>("featured");
   const [currentPage, setCurrentPage]       = useState(1);
   const [sortOpen, setSortOpen]             = useState(false);
@@ -92,7 +98,7 @@ export default function ShopClient({ initialProducts, categories }: ShopClientPr
 
             {/* Category tabs */}
             <nav className="flex items-center gap-0.5 sm:gap-1 overflow-x-auto scrollbar-hide flex-1 min-w-0">
-              {categories.map((cat) => (
+              {categoryList.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => handleCategoryChange(cat)}
@@ -100,7 +106,7 @@ export default function ShopClient({ initialProducts, categories }: ShopClientPr
                     activeCategory === cat ? "text-primary" : "opacity-60 hover:opacity-100"
                   }`}
                 >
-                  {cat}
+                  {cat === "All" ? t("filter.all") : cat}
                   {activeCategory === cat && (
                     <span className="absolute bottom-0 left-0 right-0 h-px bg-primary" />
                   )}
@@ -111,7 +117,7 @@ export default function ShopClient({ initialProducts, categories }: ShopClientPr
             {/* Right: count + sort */}
             <div className="flex items-center gap-3 sm:gap-6 shrink-0">
               <span className="text-[10px] sm:text-[11px] tracking-widest opacity-40 hidden sm:block">
-                {filtered.length} pieces
+                {filtered.length} {t("filter.pieces")}
               </span>
 
               <div className="relative">
@@ -119,8 +125,8 @@ export default function ShopClient({ initialProducts, categories }: ShopClientPr
                   onClick={() => setSortOpen((o) => !o)}
                   className="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-[11px] tracking-[0.2em] uppercase opacity-70 hover:opacity-100 transition-opacity"
                 >
-                  <span className="hidden sm:inline">{SORT_OPTIONS.find((o) => o.value === sortBy)?.label}</span>
-                  <span className="sm:hidden">Sort</span>
+                  <span className="hidden sm:inline">{t("sort." + (SORT_KEYS.find((o) => o.value === sortBy)?.key ?? "featured"))}</span>
+                  <span className="sm:hidden">{t("sort.label")}</span>
                   <span className="material-symbols-outlined text-sm sm:text-[16px]">
                     {sortOpen ? "expand_less" : "expand_more"}
                   </span>
@@ -128,7 +134,7 @@ export default function ShopClient({ initialProducts, categories }: ShopClientPr
 
                 {sortOpen && (
                   <div className="absolute right-0 top-full mt-2 w-44 sm:w-48 bg-background-light dark:bg-background-dark border border-brand-brown/15 dark:border-white/10 shadow-xl z-50">
-                    {SORT_OPTIONS.map((opt) => (
+                    {SORT_KEYS.map((opt) => (
                       <button
                         key={opt.value}
                         onClick={() => handleSortChange(opt.value)}
@@ -136,7 +142,7 @@ export default function ShopClient({ initialProducts, categories }: ShopClientPr
                           sortBy === opt.value ? "text-primary" : ""
                         }`}
                       >
-                        {opt.label}
+                        {t("sort." + opt.key)}
                       </button>
                     ))}
                   </div>
@@ -156,13 +162,13 @@ export default function ShopClient({ initialProducts, categories }: ShopClientPr
         {pageItems.length === 0 ? (
           <div className="text-center py-20 md:py-32">
             <span className="material-symbols-outlined text-4xl md:text-5xl opacity-20 mb-4 block">search_off</span>
-            <p className="font-display italic text-xl md:text-2xl opacity-40">No pieces found</p>
+            <p className="font-display italic text-xl md:text-2xl opacity-40">{t("filter.noPieces")}</p>
           </div>
         ) : (
           <>
             {/* Info row */}
             <p className="text-[10px] sm:text-[11px] tracking-widest opacity-40 mb-6 md:mb-10">
-              Showing {startIndex + 1}–{Math.min(startIndex + PAGE_SIZE, filtered.length)} of {filtered.length} pieces
+              {t("filter.showing", { start: startIndex + 1, end: Math.min(startIndex + PAGE_SIZE, filtered.length), total: filtered.length })}
             </p>
 
             {/* Grid */}
@@ -191,7 +197,7 @@ export default function ShopClient({ initialProducts, categories }: ShopClientPr
                   <button
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    aria-label="Previous page"
+                    aria-label={t("filter.prevPage")}
                     className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-brand-brown/20 dark:border-white/15 disabled:opacity-25 disabled:cursor-not-allowed hover:border-primary hover:text-primary transition-all duration-200"
                   >
                     <span className="material-symbols-outlined text-base sm:text-lg">chevron_left</span>
@@ -227,7 +233,7 @@ export default function ShopClient({ initialProducts, categories }: ShopClientPr
                   <button
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    aria-label="Next page"
+                    aria-label={t("filter.nextPage")}
                     className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-brand-brown/20 dark:border-white/15 disabled:opacity-25 disabled:cursor-not-allowed hover:border-primary hover:text-primary transition-all duration-200"
                   >
                     <span className="material-symbols-outlined text-base sm:text-lg">chevron_right</span>
@@ -236,7 +242,7 @@ export default function ShopClient({ initialProducts, categories }: ShopClientPr
 
                 {/* Page x of y */}
                 <p className="text-[10px] tracking-[0.25em] uppercase opacity-40">
-                  Page {currentPage} of {totalPages}
+                  {t("filter.page", { current: currentPage, total: totalPages })}
                 </p>
               </div>
             )}

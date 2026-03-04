@@ -1,0 +1,40 @@
+{
+  "list": {
+    "title": "Sản phẩm của chúng tôi",
+    "empty": "Không có sản phẩm nào"
+  },
+  "shopHero": {
+    "title": "Bộ sưu tập",
+    "subtitle": "Đồ thủ công cao cấp cho ngôi nhà hiện đại — mỗi món là một tác phẩm nghệ thuật.",
+    "alt": "Bộ sưu tập"
+  },
+  "sort": {
+    "label": "Sắp xếp",
+    "featured": "Nổi bật",
+    "priceAsc": "Giá: Thấp đến cao",
+    "priceDesc": "Giá: Cao đến thấp",
+    "newest": "Mới nhất"
+  },
+  "filter": {
+    "all": "Tất cả",
+    "pieces": "sản phẩm",
+    "showing": "Hiển thị {start}–{end} / {total} sản phẩm",
+    "noPieces": "Không tìm thấy sản phẩm",
+    "prevPage": "Trang trước",
+    "nextPage": "Trang sau",
+    "page": "Trang {current} / {total}"
+  },
+  "craftBanner": {
+    "eyebrow": "Đặt may theo yêu cầu",
+    "title": "Không tìm thấy món bạn cần?",
+    "desc": "Mọi tác phẩm tại xưởng của chúng tôi đều có thể chế tác theo đúng yêu cầu — kích thước, chất liệu và màu sắc.",
+    "cta": "Đặt may riêng"
+  },
+  "productCard": {
+    "quickAdd": "Thêm nhanh",
+    "wishlist": "Yêu thích"
+  },
+  "categoryCard": {
+    "pieces": "sản phẩm"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "list": {
+    "title": "Our Products",
+    "empty": "No products found"
+  },
+  "shopHero": {
+    "title": "The Collection",
+    "subtitle": "Handcrafted luxury for the modern home — each piece a work of art.",
+    "alt": "The Collection"
+  },
+  "sort": {
+    "label": "Sort",
+    "featured": "Featured",
+    "priceAsc": "Price: Low to High",
+    "priceDesc": "Price: High to Low",
+    "newest": "Newest"
+  },
+  "filter": {
+    "all": "All",
+    "pieces": "pieces",
+    "showing": "Showing {start}–{end} of {total} pieces",
+    "noPieces": "No pieces found",
+    "prevPage": "Previous page",
+    "nextPage": "Next page",
+    "page": "Page {current} of {total}"
+  },
+  "craftBanner": {
+    "eyebrow": "Made to Order",
+    "title": "Can't find what you're looking for?",
+    "desc": "Every piece in our atelier can be custom-crafted to your exact specifications — dimensions, fibres, and colour.",
+    "cta": "Request Bespoke"
+  },
+  "productCard": {
+    "quickAdd": "Quick Add",
+    "wishlist": "Wishlist"
+  },
+  "categoryCard": {
+    "pieces": "pieces"
+  }
+}

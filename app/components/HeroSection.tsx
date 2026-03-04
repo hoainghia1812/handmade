@@ -1,11 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
   const [scrollY, setScrollY] = useState(0);
   const rafRef = useRef<number | null>(null);
+  const locale = useLocale();
+  const t = useTranslations("home");
 
   useEffect(() => {
     const onScroll = () => {
@@ -19,6 +24,8 @@ export default function HeroSection() {
     };
   }, []);
 
+  const basePath = `/${locale}`;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
 
@@ -29,7 +36,7 @@ export default function HeroSection() {
       >
         <Image
           fill
-          alt="Luxury Wool Texture"
+          alt={t("hero.altImage")}
           className="object-cover brightness-[0.85] dark:brightness-[0.6] scale-110"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIFebga5kQz5t3adBI1sSPmuTDrOHAenWzC15lfdgvJFs7O8ZUp3guexQ632Fk3qP7pS2UaebNoi83y5CJZ4qofy6A6HhV-qr67tyLNym0gPvhuo2PPc-B31X5W7izgAs36toYcYaTcZhaOAmRNVSkzndtJj75cLTSFuyy2GFzIPGee3jWbLPImAua02Mhh3wdvCCKiZn93MIQg_l_vd279o8_477w1PlGOmb-IxNCkB88014BVgiz-tdlBcciYxBs7HuZaYvoCOE"
           priority
@@ -39,24 +46,24 @@ export default function HeroSection() {
       {/* Hero content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 animate-[heroIn_1.2s_cubic-bezier(0.22,1,0.36,1)_0.2s_both]">
         <h2 className="font-display italic text-lg sm:text-2xl md:text-3xl mb-3 md:mb-4 text-primary">
-          Artisanship in every stitch
+          {t("hero.eyebrow")}
         </h2>
         <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 md:mb-8">
-          The Luxury of Giving
+          {t("hero.title")}
         </h1>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
-          <a
+          <Link
             className="w-full sm:w-auto bg-primary hover:bg-opacity-90 text-white px-8 py-3 md:px-10 md:py-4 text-xs sm:text-sm tracking-widest uppercase transition-all duration-300"
-            href="/shop"
+            href={`${basePath}/shop`}
           >
-            Shop Collection
-          </a>
-          <a
+            {t("hero.shopCta")}
+          </Link>
+          <Link
             className="w-full sm:w-auto border border-white/40 hover:border-white text-white px-8 py-3 md:px-10 md:py-4 text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 bg-white/5 backdrop-blur-sm"
-            href="/#story"
+            href={`${basePath}/#story`}
           >
-            Our Process
-          </a>
+            {t("hero.processCta")}
+          </Link>
         </div>
       </div>
 

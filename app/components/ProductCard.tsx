@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Product, formatPrice } from "../types/product";
+import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 interface ProductCardProps {
   product: Product;
@@ -12,9 +14,11 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const { name, priceInCents, currency, material, imageUrl, badge, slug } = product;
   const [wished, setWished] = useState(false);
+  const locale = useLocale();
+  const t = useTranslations("product");
 
   return (
-    <Link href={`/shop/${slug}`} className="group block cursor-pointer">
+    <Link href={`/${locale}/shop/${slug}`} className="group block cursor-pointer">
       <div className="relative aspect-4/5 overflow-hidden mb-3 sm:mb-4 md:mb-5 bg-stone-100 dark:bg-stone-800">
         <Image
           fill
@@ -34,7 +38,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <button
           onClick={(e) => { e.preventDefault(); setWished((w) => !w); }}
           className="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4 bg-white/80 dark:bg-black/70 p-1.5 sm:p-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-white"
-          aria-label="Wishlist"
+          aria-label={t("productCard.wishlist")}
         >
           <span
             className={`material-symbols-outlined text-sm sm:text-base md:text-[18px] ${wished ? "text-primary" : ""}`}
@@ -50,7 +54,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             onClick={(e) => e.preventDefault()}
             className="w-full bg-brand-brown dark:bg-background-light text-background-light dark:text-brand-brown text-[9px] sm:text-[10px] md:text-[11px] tracking-[0.25em] uppercase py-2.5 sm:py-3 md:py-4 hover:bg-primary dark:hover:bg-primary dark:hover:text-white transition-colors duration-300"
           >
-            Quick Add
+            {t("productCard.quickAdd")}
           </button>
         </div>
       </div>

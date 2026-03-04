@@ -1,0 +1,32 @@
+{
+  "appName": "Mush & Co.",
+  "header": {
+    "home": "Home",
+    "shop": "Shop",
+    "story": "Our Story",
+    "language": "Language",
+    "cart": "Cart"
+  },
+  "footer": {
+    "tagline": "Elevating the everyday through artisanal craftsmanship and the world's finest natural fibers.",
+    "boutique": "Boutique",
+    "boutiqueAll": "All Collections",
+    "boutiqueLimited": "Limited Editions",
+    "boutiqueGift": "Gift Cards",
+    "boutiqueCare": "Care Guide",
+    "concierge": "Concierge",
+    "conciergeShipping": "Shipping & Returns",
+    "conciergeWholesale": "Wholesale Inquiry",
+    "conciergeBespoke": "Bespoke Orders",
+    "conciergeContact": "Contact Us",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Join our circle for exclusive early access and artisan stories.",
+    "newsletterPlaceholder": "Email Address",
+    "copyright": "© 2024 Mush & Co. All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "chat": {
+    "ariaLabel": "Contact via Zalo"
+  }
+}

@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ChatButton from "../components/ChatButton";
 import ShopHero from "./_components/ShopHero";
@@ -19,8 +18,6 @@ export default async function ShopPage() {
 
   return (
     <>
-      <Header />
-
       <main className="bg-background-light dark:bg-background-dark min-h-screen">
         <ShopHero />
         <ShopClient initialProducts={products} categories={categories} />

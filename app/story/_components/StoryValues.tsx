@@ -1,46 +1,31 @@
 "use client";
 
 import { useInView } from "../../hooks/useInView";
-
-const VALUES = [
-  {
-    number: "01",
-    title:  "Artisan First",
-    icon:   "handshake",
-    body:   "We work directly with master weavers — no middlemen, no shortcuts. Every commission begins with a conversation, a sketch, and a commitment to pure human skill.",
-  },
-  {
-    number: "02",
-    title:  "Pure Materials",
-    icon:   "eco",
-    body:   "We source only certified natural fibres: Merino wool from ethically managed Australian farms, Grade-A cashmere from Mongolia, and baby alpaca from the Peruvian highlands.",
-  },
-  {
-    number: "03",
-    title:  "Timeless Design",
-    icon:   "auto_awesome",
-    body:   "We reject trends in favour of permanence. Each silhouette is refined over months until it is simply perfect — a piece you will still love in twenty years.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function StoryValues() {
   const { ref, inView } = useInView<HTMLDivElement>();
+  const t = useTranslations("story");
+
+  const VALUES = [
+    { number: "01", titleKey: "v1Title", bodyKey: "v1Body", icon: "handshake" },
+    { number: "02", titleKey: "v2Title", bodyKey: "v2Body", icon: "eco" },
+    { number: "03", titleKey: "v3Title", bodyKey: "v3Body", icon: "auto_awesome" },
+  ];
 
   return (
     <section className="py-20 sm:py-28 md:py-36 bg-[#EBE4D5] dark:bg-neutral-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
-        {/* Header */}
         <div className={`reveal ${inView ? "in-view" : ""} mb-16 sm:mb-20`}>
           <span className="text-primary tracking-[0.4em] uppercase text-[10px] sm:text-xs font-semibold block mb-4">
-            What We Stand For
+            {t("values.eyebrow")}
           </span>
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic max-w-lg">
-            Three pillars. One promise.
+            {t("values.title")}
           </h2>
         </div>
 
-        {/* Values */}
         <div ref={ref} className="divide-y divide-brand-brown/10 dark:divide-white/10">
           {VALUES.map((v, i) => (
             <div
@@ -56,10 +41,10 @@ export default function StoryValues() {
               {/* Content */}
               <div className="space-y-3 sm:space-y-4">
                 <h3 className="font-display text-2xl sm:text-3xl md:text-4xl group-hover:text-primary transition-colors duration-300">
-                  {v.title}
+                  {t("values." + v.titleKey)}
                 </h3>
                 <p className="text-sm sm:text-base leading-relaxed opacity-70 max-w-xl">
-                  {v.body}
+                  {t("values." + v.bodyKey)}
                 </p>
               </div>
 

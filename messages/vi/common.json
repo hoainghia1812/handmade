@@ -1,0 +1,32 @@
+{
+  "appName": "Mush & Co.",
+  "header": {
+    "home": "Trang chủ",
+    "shop": "Cửa hàng",
+    "story": "Câu chuyện",
+    "language": "Ngôn ngữ",
+    "cart": "Giỏ hàng"
+  },
+  "footer": {
+    "tagline": "Nâng tầm cuộc sống thường nhật bằng nghề thủ công tinh xảo và những sợi tự nhiên đẳng cấp nhất.",
+    "boutique": "Cửa hàng",
+    "boutiqueAll": "Tất cả bộ sưu tập",
+    "boutiqueLimited": "Phiên bản giới hạn",
+    "boutiqueGift": "Thẻ quà tặng",
+    "boutiqueCare": "Hướng dẫn bảo quản",
+    "concierge": "Hỗ trợ",
+    "conciergeShipping": "Giao hàng & Đổi trả",
+    "conciergeWholesale": "Đặt hàng sỉ",
+    "conciergeBespoke": "Đặt may theo yêu cầu",
+    "conciergeContact": "Liên hệ",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Tham gia để nhận ưu đãi sớm và những câu chuyện nghệ nhân.",
+    "newsletterPlaceholder": "Địa chỉ email",
+    "copyright": "© 2024 Mush & Co. Bảo lưu mọi quyền.",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản dịch vụ"
+  },
+  "chat": {
+    "ariaLabel": "Liên hệ qua Zalo"
+  }
+}

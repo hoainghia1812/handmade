@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "eyebrow": "Tinh xảo trong từng đường kim",
+    "title": "Sự xa xỉ của việc sẻ chia",
+    "shopCta": "Xem bộ sưu tập",
+    "processCta": "Quy trình của chúng tôi",
+    "altImage": "Chất liệu len cao cấp"
+  },
+  "curation": {
+    "eyebrow": "Tuyển chọn",
+    "title": "Hàng mới về",
+    "viewAll": "Xem tất cả sản phẩm"
+  },
+  "ourStory": {
+    "eyebrow": "Dấu ấn người thợ",
+    "title": "Bắt nguồn từ di sản, chế tác cho sự thoải mái.",
+    "p1": "Tại Mush & Co., chúng tôi tin rằng sự xa xỉ được cảm nhận, không chỉ nhìn thấy. Mỗi tác phẩm trong bộ sưu tập đều được đan/đan móc tỉ mỉ bởi nghệ nhân bậc thầy với kỹ thuật truyền qua nhiều thế hệ.",
+    "p2": "Chúng tôi chỉ chọn những sợi tự nhiên bền vững tốt nhất—từ len Merino thu hoạch có đạo đức đến cashmere hạng A hiếm—đảm bảo mỗi tác phẩm là di sản cho ngôi nhà bạn.",
+    "cta": "Khám phá câu chuyện của chúng tôi",
+    "altHands": "Bàn tay nghệ nhân",
+    "altWool": "Chi tiết len"
+  },
+  "testimonial": {
+    "quote": "Có một tâm hồn sâu sắc trong những thứ được làm bằng tay. Mush & Co. nắm bắt sự ấm áp và xa xỉ theo cách riêng tư.",
+    "author": "Elena Vance, Nhà thiết kế nội thất"
+  },
+  "lookbook": {
+    "title": "Không gian sống tuyển chọn",
+    "desc": "Một tuyển tập những món yêu thích của chúng tôi trong không gian hiện đại, tối giản.",
+    "cta": "Xem Lookbook",
+    "altMain": "Thiết kế nội thất",
+    "altDetail": "Chi tiết"
+  },
+  "categories": {
+    "heritage-throws": {
+      "title": "Chăn Heritage",
+      "label": "Khám phá chăn phủ"
+    },
+    "artisan-cushions": {
+      "title": "Gối trang trí thủ công",
+      "label": "Xem phụ kiện"
+    },
+    "living-essentials": {
+      "title": "Vật dụng thiết yếu",
+      "label": "Khám phá essentials"
+    }
+  }
+}

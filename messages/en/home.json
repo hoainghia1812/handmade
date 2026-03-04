@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "eyebrow": "Artisanship in every stitch",
+    "title": "The Luxury of Giving",
+    "shopCta": "Shop Collection",
+    "processCta": "Our Process",
+    "altImage": "Luxury Wool Texture"
+  },
+  "curation": {
+    "eyebrow": "Curation",
+    "title": "New Arrivals",
+    "viewAll": "View All Products"
+  },
+  "ourStory": {
+    "eyebrow": "The Maker's Mark",
+    "title": "Rooted in Heritage, Crafted for Comfort.",
+    "p1": "At Mush & Co., we believe that luxury is felt, not just seen. Every piece in our collection is meticulously hand-crocheted or woven by master artisans using time-honored techniques passed through generations.",
+    "p2": "We source only the finest, sustainable natural fibers—from ethically harvested Merino wool to rare Grade-A cashmere—ensuring each creation is a legacy piece for your home.",
+    "cta": "Discover Our Story",
+    "altHands": "Artisan Hands",
+    "altWool": "Wool Detail"
+  },
+  "testimonial": {
+    "quote": "There is a profound soul in things made by hand. Mush & Co. captures the essence of warmth and luxury in a way that feels personal.",
+    "author": "Elena Vance, Interior Designer"
+  },
+  "lookbook": {
+    "title": "Curated Living Spaces",
+    "desc": "A selection of our favorite pieces styled in modern, minimalist environments.",
+    "cta": "Shop Lookbook",
+    "altMain": "Interior Design",
+    "altDetail": "Detail"
+  },
+  "categories": {
+    "heritage-throws": {
+      "title": "Heritage Throws",
+      "label": "Explore Throws"
+    },
+    "artisan-cushions": {
+      "title": "Artisan Cushions",
+      "label": "View Accents"
+    },
+    "living-essentials": {
+      "title": "Living Essentials",
+      "label": "Browse Essentials"
+    }
+  }
+}

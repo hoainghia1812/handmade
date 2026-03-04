@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "eyebrow": "Mush & Co. — Est. 2018",
+    "title": "Our",
+    "titleEm": "Story",
+    "subtitle": "A legacy built one thread at a time — where heritage craft meets the modern luxury of giving.",
+    "scroll": "Scroll",
+    "alt": "Artisan crafting"
+  },
+  "heritage": {
+    "chapter": "Chapter 01 — Heritage",
+    "title": "Rooted in the craft of generations.",
+    "p1": "Mush & Co. was born from a single belief — that true luxury is handmade. Founded in 2018 in Hồ Chí Minh City, we set out to preserve the ancient art of hand-weaving while bringing it into the modern home.",
+    "p2": "Every piece carries the memory of the hands that made it. Our artisans have inherited their techniques from parents and grandparents, keeping alive a tradition that mass production could never replicate.",
+    "years": "Years of craft",
+    "stat1": "Pieces per year",
+    "stat2": "Master artisans",
+    "stat3": "Hand-crafted"
+  },
+  "values": {
+    "eyebrow": "What We Stand For",
+    "title": "Three pillars. One promise.",
+    "v1Title": "Artisan First",
+    "v1Body": "We work directly with master weavers — no middlemen, no shortcuts. Every commission begins with a conversation, a sketch, and a commitment to pure human skill.",
+    "v2Title": "Pure Materials",
+    "v2Body": "We source only certified natural fibres: Merino wool from ethically managed Australian farms, Grade-A cashmere from Mongolia, and baby alpaca from the Peruvian highlands.",
+    "v3Title": "Timeless Design",
+    "v3Body": "We reject trends in favour of permanence. Each silhouette is refined over months until it is simply perfect — a piece you will still love in twenty years."
+  },
+  "process": {
+    "chapter": "Chapter 02 — The Process",
+    "headline": "From fibre to heirloom.",
+    "subline": "A journey of 40–200 hours, travelled entirely by hand.",
+    "step1Title": "Design",
+    "step1Body": "Each collection begins with extensive research into traditional weaving patterns, translated into contemporary silhouettes through weeks of sketching and sampling.",
+    "step2Title": "Source",
+    "step2Body": "We travel to the origin of each fibre — meeting farmers, testing raw materials, and selecting only those that meet our rigorous standards of quality and ethics.",
+    "step3Title": "Craft",
+    "step3Body": "Our artisans spend between 40 and 200 hours on a single piece. No machines are involved in the weaving process — only hands, patience, and generations of inherited skill.",
+    "step4Title": "Deliver",
+    "step4Body": "Every finished piece is inspected by hand, wrapped in archival tissue, and shipped in our signature keepsake box — ready to become part of your home for generations."
+  },
+  "artisans": {
+    "quote": "I do not make products. I make memories — woven one thread at a time, with love for the person who will receive them.",
+    "name": "Nguyễn Thị Lan",
+    "role": "Lead Artisan — 22 years",
+    "stat1": "Average experience",
+    "stat2": "Master artisans",
+    "stat3": "Generations of craft",
+    "stat4": "Women-led atelier",
+    "alt": "Artisan at work"
+  },
+  "materials": {
+    "eyebrow": "Chapter 03 — The Fibre",
+    "title": "Only the finest raw materials on earth.",
+    "merino": "Merino Wool",
+    "merinoOrigin": "Australia",
+    "merinoGrade": "Superfine 17.5 micron",
+    "merinoTraits": "Ultra-soft, Breathable, Thermoregulating",
+    "cashmere": "Cashmere",
+    "cashmereOrigin": "Mongolia",
+    "cashmereGrade": "Grade A — 14 micron",
+    "cashmereTraits": "Exceptionally rare, Cloud-light, Ages beautifully",
+    "alpaca": "Baby Alpaca",
+    "alpacaOrigin": "Peru",
+    "alpacaGrade": "First-shear fibre",
+    "alpacaTraits": "Hypoallergenic, Silk-like sheen, Durable",
+    "cotton": "Organic Cotton",
+    "cottonOrigin": "Vietnam",
+    "cottonGrade": "GOTS Certified",
+    "cottonTraits": "Sustainably farmed, Crisp texture, Colourfast"
+  },
+  "cta": {
+    "eyebrow": "The Collection Awaits",
+    "title": "Wear the story.",
+    "desc": "Every piece is a chapter waiting to be lived in. Browse our full collection of handcrafted luxury.",
+    "shopCta": "Shop Collection",
+    "storyCta": "Our Story",
+    "backToHome": "Back to Home",
+    "alt": "Collection"
+  }
+}

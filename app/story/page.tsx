@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ChatButton from "../components/ChatButton";
 import StoryHero      from "./_components/StoryHero";
@@ -17,7 +16,6 @@ export const metadata = {
 export default function StoryPage() {
   return (
     <>
-      <Header />
       <main>
         <StoryHero />
         <StoryHeritage />
