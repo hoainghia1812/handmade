@@ -1,8 +1,11 @@
-import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+"use client";
 
-export default async function ShopHero() {
-  const t = await getTranslations("product");
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+
+export default function ShopHero() {
+  const t = useTranslations("product");
+
   return (
     <section className="relative h-[50vh] sm:h-[55vh] md:h-[62vh] min-h-[280px] sm:min-h-[360px] md:min-h-[420px] flex items-end overflow-hidden">
       <div className="absolute inset-0">

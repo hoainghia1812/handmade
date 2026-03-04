@@ -7,7 +7,8 @@ import { defaultLocale, locales } from "@/i18n/config";
 
 type LayoutProps = {
   children: ReactNode;
-  params: Promise<{ locale: Locale }>;
+  // phù hợp với kiểu validator của Next (string)
+  params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {
@@ -15,10 +16,10 @@ export function generateStaticParams() {
 }
 
 export default async function LocaleLayout({ children, params }: LayoutProps) {
-  const { locale } = await params;
+  const { locale: rawLocale } = await params;
 
-  const isSupported = locales.includes(locale);
-  const finalLocale = isSupported ? locale : defaultLocale;
+  const isSupported = (locales as readonly string[]).includes(rawLocale);
+  const finalLocale = (isSupported ? rawLocale : defaultLocale) as Locale;
 
   const messages = await getMessages(finalLocale, ["common", "home", "product", "story"]);
 

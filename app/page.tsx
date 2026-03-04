@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { defaultLocale } from "@/i18n/config";
 
-export default function StoryPage() {
-  redirect(`/${defaultLocale}/story`);
+export default function RootPage() {
+  redirect(`/${defaultLocale}`);
 }
 

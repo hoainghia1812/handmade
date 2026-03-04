@@ -1,31 +1,6 @@
-import Footer from "../components/Footer";
-import ChatButton from "../components/ChatButton";
-import ShopHero from "./_components/ShopHero";
-import ShopClient from "./_components/ShopClient";
-import CraftBanner from "./_components/CraftBanner";
-import { getProducts, getProductCategories } from "../lib/products";
+import { redirect } from "next/navigation";
+import { defaultLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Shop — Mush & Co.",
-  description: "Browse our full collection of handcrafted luxury pieces.",
-};
-
-export default async function ShopPage() {
-  const [{ data: products }, categories] = await Promise.all([
-    getProducts(),
-    getProductCategories(),
-  ]);
-
-  return (
-    <>
-      <main className="bg-background-light dark:bg-background-dark min-h-screen">
-        <ShopHero />
-        <ShopClient initialProducts={products} categories={categories} />
-        <CraftBanner />
-      </main>
-
-      <Footer />
-      <ChatButton />
-    </>
-  );
+export default function ShopPage() {
+  redirect(`/${defaultLocale}/shop`);
 }
