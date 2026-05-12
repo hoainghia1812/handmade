@@ -23,7 +23,7 @@ export default function ShopHero() {
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white font-medium tracking-tight animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.25s_both]">
           {t("shopHero.title")}
         </h1>
-        <p className="text-white/70 mt-2 sm:mt-4 text-xs sm:text-sm tracking-widest max-w-sm sm:max-w-md animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.4s_both]">
+        <p className="text-white/70 mt-2 sm:mt-4 text-xs sm:text-sm tracking-widest max-w-sm sm:max-w-md text-justify animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.4s_both]">
           {t("shopHero.subtitle")}
         </p>
       </div>

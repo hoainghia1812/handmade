@@ -42,13 +42,16 @@ export default function StoryHero() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-16 sm:pb-20 md:pb-28">
         <div className="max-w-3xl">
-          <p className="text-primary tracking-[0.5em] uppercase text-[10px] sm:text-xs font-semibold mb-4 animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
+          <p className="story-eyebrow mb-4 animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
             {t("hero.eyebrow")}
           </p>
-          <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] text-white font-medium tracking-tight leading-none mb-6 animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.25s_both]">
-            {t("hero.title")}<br /><em>{t("hero.titleEm")}</em>
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-normal tracking-tight leading-[0.98] mb-4 sm:mb-6 animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.25s_both]">
+            {t("hero.title")}<br /><em className="font-medium">{t("hero.titleEm")}</em>
           </h1>
-          <p className="text-white/60 text-sm sm:text-base max-w-md leading-relaxed animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.4s_both]">
+          <p className="story-hero-lead max-w-2xl mb-5 sm:mb-6 animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.32s_both]">
+            {t("hero.lead")}
+          </p>
+          <p className="story-hero-prose animate-[heroIn_1s_cubic-bezier(0.22,1,0.36,1)_0.4s_both]">
             {t("hero.subtitle")}
           </p>
         </div>

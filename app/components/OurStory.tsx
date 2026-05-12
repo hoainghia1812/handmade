@@ -46,10 +46,10 @@ export default function OurStory() {
             <h2 className={`reveal from-right reveal-delay-100 ${inView ? "in-view" : ""} font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight italic`}>
               {t("ourStory.title")}
             </h2>
-            <p className={`reveal from-right reveal-delay-200 ${inView ? "in-view" : ""} text-base md:text-lg leading-relaxed opacity-80`}>
+            <p className={`reveal from-right reveal-delay-200 ${inView ? "in-view" : ""} text-base md:text-lg leading-relaxed opacity-80 text-justify`}>
               {t("ourStory.p1")}
             </p>
-            <p className={`reveal from-right reveal-delay-300 ${inView ? "in-view" : ""} text-base md:text-lg leading-relaxed opacity-80`}>
+            <p className={`reveal from-right reveal-delay-300 ${inView ? "in-view" : ""} text-base md:text-lg leading-relaxed opacity-80 text-justify`}>
               {t("ourStory.p2")}
             </p>
             <div className={`reveal from-right reveal-delay-400 ${inView ? "in-view" : ""} pt-2 md:pt-6`}>

@@ -43,8 +43,8 @@ function ProcessStep({ step, index }: StepProps) {
         <span className="font-display text-7xl sm:text-8xl font-bold text-brand-brown/8 dark:text-white/8 leading-none mb-4 select-none">
           {step.number}
         </span>
-        <h3 className="font-display text-3xl sm:text-4xl md:text-5xl italic mb-4 sm:mb-6">{title}</h3>
-        <p className="text-sm sm:text-base leading-relaxed opacity-70 max-w-sm">{body}</p>
+        <h3 className="story-step-title mb-4 sm:mb-6">{title}</h3>
+        <p className="story-body max-w-md">{body}</p>
       </div>
     </div>
   );
@@ -60,14 +60,14 @@ export default function StoryProcess() {
 
         <div ref={headRef} className="mb-16 sm:mb-20 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <div>
-            <span className={`reveal from-left ${headInView ? "in-view" : ""} text-primary tracking-[0.4em] uppercase text-[10px] sm:text-xs font-semibold block mb-4`}>
+            <span className={`reveal from-left ${headInView ? "in-view" : ""} story-eyebrow block mb-4`}>
               {t("process.chapter")}
             </span>
-            <h2 className={`reveal from-left reveal-delay-100 ${headInView ? "in-view" : ""} font-display text-4xl sm:text-5xl md:text-6xl italic max-w-lg`}>
+            <h2 className={`reveal from-left reveal-delay-100 ${headInView ? "in-view" : ""} story-section-title max-w-lg`}>
               {t("process.headline")}
             </h2>
           </div>
-          <p className={`reveal from-right ${headInView ? "in-view" : ""} text-sm opacity-50 max-w-xs leading-relaxed text-right hidden sm:block`}>
+          <p className={`reveal from-right ${headInView ? "in-view" : ""} font-sans text-sm text-brand-brown/55 dark:text-background-light/55 max-w-xs leading-relaxed text-right hidden sm:block tracking-wide`}>
             {t("process.subline")}
           </p>
         </div>

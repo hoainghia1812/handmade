@@ -20,7 +20,7 @@ export default function CraftBanner() {
           <h2 className={`reveal from-left reveal-delay-100 font-display text-3xl sm:text-4xl md:text-5xl italic text-background-light leading-tight ${inView ? "in-view" : ""}`}>
             {t("craftBanner.title")}
           </h2>
-          <p className={`reveal from-left reveal-delay-200 text-background-light/60 text-xs sm:text-sm max-w-md mx-auto lg:mx-0 ${inView ? "in-view" : ""}`}>
+          <p className={`reveal from-left reveal-delay-200 text-background-light/60 text-xs sm:text-sm max-w-md mx-auto lg:mx-0 text-justify ${inView ? "in-view" : ""}`}>
             {t("craftBanner.desc")}
           </p>
         </div>

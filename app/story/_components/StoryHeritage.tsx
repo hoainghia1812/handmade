@@ -42,18 +42,18 @@ export default function StoryHeritage() {
           {/* Text side */}
           <div className="space-y-6 sm:space-y-8">
             <div className={`reveal from-right ${inView ? "in-view" : ""}`}>
-              <span className="text-primary tracking-[0.4em] uppercase text-[10px] sm:text-xs font-semibold block mb-4">
+              <span className="story-eyebrow block mb-4">
                 {t("heritage.chapter")}
               </span>
-              <h2 className="font-display text-4xl sm:text-5xl md:text-6xl leading-tight italic">
+              <h2 className="story-section-title">
                 {t("heritage.title")}
               </h2>
             </div>
 
-            <p className={`reveal from-right reveal-delay-100 ${inView ? "in-view" : ""} text-base sm:text-lg leading-relaxed opacity-70`}>
+            <p className={`reveal from-right reveal-delay-100 ${inView ? "in-view" : ""} story-body`}>
               {t("heritage.p1")}
             </p>
-            <p className={`reveal from-right reveal-delay-200 ${inView ? "in-view" : ""} text-base sm:text-lg leading-relaxed opacity-70`}>
+            <p className={`reveal from-right reveal-delay-200 ${inView ? "in-view" : ""} story-body`}>
               {t("heritage.p2")}
             </p>
 
@@ -61,7 +61,7 @@ export default function StoryHeritage() {
               {stats.map((s) => (
                 <div key={s.label}>
                   <p className="font-display text-3xl sm:text-4xl font-bold text-primary leading-none">{s.num}</p>
-                  <p className="text-[9px] sm:text-[10px] tracking-[0.25em] uppercase opacity-50 mt-1">{s.label}</p>
+                  <p className="font-sans text-[9px] sm:text-[10px] tracking-[0.28em] uppercase opacity-55 mt-1">{s.label}</p>
                 </div>
               ))}
             </div>

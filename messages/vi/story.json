@@ -1,17 +1,18 @@
 {
   "hero": {
-    "eyebrow": "Mush & Co. — Thành lập 2018",
-    "title": "Câu chuyện",
-    "titleEm": "của chúng tôi",
-    "subtitle": "Di sản được dệt nên từng sợi một — nơi nghề thủ công truyền thống gặp sự xa xỉ hiện đại của việc sẻ chia.",
+    "eyebrow": "",
+    "title": "CÂU CHUYỆN",
+    "titleEm": "CỦA CHÚNG TÔI",
+    "lead": "Di sản được dệt nên từ sự tử tế.",
+    "subtitle": "Tại Mush & Co., mỗi sợi len là một lời cam kết. Chúng tôi không chỉ tạo ra sản phẩm, chúng tôi trao gửi sự quan tâm. Đó là nơi giá trị thủ công truyền thống tìm thấy sự đồng điệu với niềm hạnh phúc của việc trao đi và nhận lại.",
     "scroll": "Cuộn",
     "alt": "Nghệ nhân đang làm việc"
   },
   "heritage": {
-    "chapter": "Chương 01 — Di sản",
-    "title": "Bắt nguồn từ nghề thủ công nhiều thế hệ.",
-    "p1": "Mush & Co. ra đời từ một niềm tin — sự xa xỉ đích thực là đồ làm bằng tay. Thành lập năm 2018 tại TP. Hồ Chí Minh, chúng tôi bảo tồn nghệ thuật dệt tay cổ xưa và đưa nó vào ngôi nhà hiện đại.",
-    "p2": "Mỗi tác phẩm mang ký ức của đôi tay làm ra nó. Nghệ nhân của chúng tôi kế thừa kỹ thuật từ cha mẹ và ông bà, giữ sống một truyền thống mà sản xuất hàng loạt không thể thay thế.",
+    "chapter": "CHƯƠNG 01 — DI SẢN",
+    "title": "Nơi những sợi len dệt nên ký ức.",
+    "p1": "Mush & Co. ra đời từ một niềm tin giản đơn: những gì được làm bằng cả trái tim sẽ luôn bền vững với thời gian. Thành lập năm 2022 tại TP. Hồ Chí Minh, chúng tôi chọn cách bước chậm hơn giữa nhịp sống hối hả để giữ gìn nghệ thuật đan dệt thủ công và mang hơi thở ấm áp đó vào không gian sống hiện đại.",
+    "p2": "Mỗi tác phẩm tại đây không chỉ là một chiếc túi, mà là nơi lưu giữ ký ức của đôi bàn tay nghệ nhân. Những người thợ của chúng tôi kế thừa kỹ thuật từ thế hệ đi trước, nâng niu từng nút thắt để giữ trọn vẹn một truyền thống mà máy móc hay sản xuất hàng loạt chẳng thể nào thay thế được.",
     "years": "Năm kinh nghiệm",
     "stat1": "Tác phẩm mỗi năm",
     "stat2": "Nghệ nhân bậc thầy",
@@ -28,55 +29,43 @@
     "v3Body": "Chúng tôi từ chối xu hướng để chọn sự trường tồn. Mỗi đường nét được tinh chỉnh qua nhiều tháng cho đến khi hoàn hảo — món đồ bạn vẫn yêu thích sau hai mươi năm."
   },
   "process": {
-    "chapter": "Chương 02 — Quy trình",
-    "headline": "Từ sợi vải đến bảo vật.",
+    "chapter": "CHƯƠNG 02 — TÂM HUYẾT",
+    "headline": "Hành trình của sự kiên nhẫn. ",
     "subline": "Hành trình 40–200 giờ, hoàn toàn bằng tay.",
-    "step1Title": "Thiết kế",
-    "step1Body": "Mỗi bộ sưu tập bắt đầu từ nghiên cứu sâu về hoa văn dệt truyền thống, chuyển thành đường nét đương đại qua nhiều tuần phác thảo và mẫu thử.",
-    "step2Title": "Nguồn nguyên liệu",
-    "step2Body": "Chúng tôi đến tận nguồn từng loại sợi — gặp nông dân, kiểm tra nguyên liệu thô, chỉ chọn những gì đạt tiêu chuẩn chất lượng và đạo đức nghiêm ngặt.",
-    "step3Title": "Chế tác",
-    "step3Body": "Nghệ nhân dành từ 40 đến 200 giờ cho một tác phẩm. Không có máy móc trong quy trình dệt — chỉ đôi tay, sự kiên nhẫn và kỹ năng kế thừa nhiều thế hệ.",
-    "step4Title": "Giao hàng",
-    "step4Body": "Mỗi tác phẩm hoàn thiện được kiểm tra bằng tay, gói trong giấy lưu trữ và gửi trong hộp quà đặc trưng — sẵn sàng trở thành một phần ngôi nhà bạn qua nhiều thế hệ."
+    "step1Title": "Chuẩn bị : ",
+    "step1Body": "Tại Mush & Co., chúng tôi không vội vã. Mỗi chiếc túi len cao cấp là kết quả của hàng chục giờ lao động miệt mài, nơi sự tĩnh lặng của không gian hòa quyện vào từng nhịp đan.",
+    "step2Title": "Tuyển chọn sợi len:",
+    "step2Body": "Chúng tôi chỉ sử dụng những dòng len cao cấp nhất, đảm bảo sự mềm mại cho đôi tay và độ bền bỉ theo năm tháng.",
+    "step3Title": "Dệt nên tâm tình:",
+    "step3Body": "Mỗi mũi kim được thực hiện bởi những nghệ nhân bậc thầy, những người coi việc đan dệt là hơi thở và lẽ sống.",
+    "step4Title": "Hoàn thiện thủ công:",
+    "step4Body": "Từng chiếc tag da hay phụ kiện kim loại đều được gắn lên với sự chuẩn xác tuyệt đối, đảm bảo tính thẩm mỹ tinh tế nhất."
+   
   },
   "artisans": {
-    "quote": "Tôi không làm sản phẩm. Tôi dệt nên ký ức — từng sợi một, với tình yêu dành cho người sẽ đón nhận chúng.",
-    "name": "Nguyễn Thị Lan",
-    "role": "Nghệ nhân trưởng — 22 năm",
-    "stat1": "Kinh nghiệm trung bình",
-    "stat2": "Nghệ nhân bậc thầy",
-    "stat3": "Thế hệ nghề thủ công",
-    "stat4": "Xưởng do phụ nữ dẫn dắt",
-    "alt": "Nghệ nhân đang làm việc"
+    "eyebrow": "GỬI GẮM NIỀM TIN",
+    "headline": "Người đồng hành cùng phong cách của bạn.",
+    "p1": "Chúng tôi hiểu rằng, khi bạn chọn Mush & Co., bạn đang chọn một giá trị sống.",
+    "p2": "Đó là sự lựa chọn dành cho những tâm hồn yêu cái đẹp nguyên bản và trân trọng những giá trị được kiến tạo từ bàn tay con người.",
+    "alt": "Không gian thương hiệu Mush & Co."
   },
   "materials": {
-    "eyebrow": "Chương 03 — Sợi vải",
-    "title": "Chỉ những nguyên liệu thô tốt nhất trên trái đất.",
-    "merino": "Len Merino",
-    "merinoOrigin": "Úc",
-    "merinoGrade": "Superfine 17.5 micron",
-    "merinoTraits": "Siêu mềm, Thoáng khí, Điều nhiệt",
-    "cashmere": "Cashmere",
-    "cashmereOrigin": "Mông Cổ",
-    "cashmereGrade": "Hạng A — 14 micron",
-    "cashmereTraits": "Cực kỳ hiếm, Nhẹ như mây, Đẹp theo năm tháng",
-    "alpaca": "Baby Alpaca",
-    "alpacaOrigin": "Peru",
-    "alpacaGrade": "Sợi lần xén đầu",
-    "alpacaTraits": "Ít gây dị ứng, Bóng như lụa, Bền",
-    "cotton": "Cotton hữu cơ",
-    "cottonOrigin": "Việt Nam",
-    "cottonGrade": "Chứng nhận GOTS",
-    "cottonTraits": "Canh tác bền vững, Chất vải sắc nét, Bền màu"
+    "eyebrow": "CHƯƠNG 03 — TRAO GỬI",
+    "title": "Nghệ thuật của việc tặng quà.",
+    "intro": "Tại Mush & Co., chúng tôi tin rằng niềm hạnh phúc thực sự nằm ở khoảnh khắc món quà được trao đi. Không chỉ là một chiếc túi len cao cấp, mỗi đơn hàng đều được chúng tôi chăm chút như một bức tâm thư gửi đến người nhận.",
+    "point1Title": "Đóng gói bằng cả trái tim",
+    "point1Body": "Mỗi sản phẩm đều được đặt trong hộp cứng cao cấp với tông màu beige và nâu đất ấm áp. Từng nếp giấy lót, từng sợi ruy băng đều được thắt lại một cách ngay ngắn, tỉ mỉ.",
+    "point2Title": "Thông điệp riêng tư",
+    "point2Body": "Chúng tôi tặng kèm những tấm thiệp viết tay để bạn có thể gửi gắm những lời chúc chân thành nhất đến người trân quý.",
+    "point3Title": "Sự chu đáo trong từng chi tiết",
+    "point3Body": "Từng chiếc tag đồng hay tag da được gắn lên túi không chỉ là định danh thương hiệu Mush & Co., mà còn là biểu tượng cho sự trân trọng đối với người sở hữu."
   },
   "cta": {
-    "eyebrow": "Bộ sưu tập đang chờ",
-    "title": "Mặc lên câu chuyện.",
-    "desc": "Mỗi tác phẩm là một chương đang chờ được sống. Xem toàn bộ bộ sưu tập đồ thủ công cao cấp.",
+    "eyebrow": "LỜI CHÀO TỪ MUSH & CO.",
+    "title": "Cảm ơn bạn vì đã cùng chúng tôi viết nên những câu chuyện tử tế.",
+    "desc": "Khi bạn cầm trên tay chiếc túi của Mush & Co., bạn đang cầm trên tay tinh hoa của sự kiên nhẫn và tình yêu nghề.\n\nHy vọng rằng, mỗi lần chạm vào những mũi len mềm mại, bạn sẽ cảm nhận được sự ấm áp và bình yên mà chúng tôi đã dệt vào đó.",
     "shopCta": "Xem bộ sưu tập",
-    "storyCta": "Câu chuyện của chúng tôi",
     "backToHome": "Về trang chủ",
-    "alt": "Bộ sưu tập"
+    "alt": "Lời chào từ Mush & Co."
   }
 }

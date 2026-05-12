@@ -24,7 +24,7 @@ export default function Lookbook() {
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
             <div className="absolute inset-4 sm:inset-6 md:inset-12 flex flex-col justify-end text-white">
               <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-2 md:mb-4">{t("lookbook.title")}</h3>
-              <p className="max-w-xs sm:max-w-md mb-4 md:mb-8 opacity-80 text-xs sm:text-sm md:text-base hidden sm:block">
+              <p className="max-w-xs sm:max-w-md mb-4 md:mb-8 opacity-80 text-xs sm:text-sm md:text-base hidden sm:block text-justify">
                 {t("lookbook.desc")}
               </p>
               <a className="text-[10px] sm:text-xs tracking-[0.2em] uppercase underline underline-offset-8" href="#">

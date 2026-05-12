@@ -17,8 +17,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Mush & Co. | The Luxury of Giving",
-  description: "Handmade Luxury — Artisanship in every stitch",
+  title: "Mush & Co. | Handcrafted Masterworks",
+  description: "Handmade Luxury — Refinement in every stitch",
 };
 
 export default function RootLayout({

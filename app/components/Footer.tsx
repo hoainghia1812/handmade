@@ -21,12 +21,12 @@ export default function Footer() {
   return (
     <footer className="bg-brand-brown text-[#DED5C8] py-20 dark:bg-black dark:text-neutral-400">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
 
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="text-2xl font-display font-bold text-white mb-6">{t("appName")}</div>
-            <p className="text-sm leading-relaxed mb-8">{t("footer.tagline")}</p>
+            <p className="text-sm leading-relaxed mb-8 text-justify">{t("footer.tagline")}</p>
             <div className="flex space-x-6">
               <a className="hover:text-primary transition-colors" href="#">Instagram</a>
               <a className="hover:text-primary transition-colors" href="#">Pinterest</a>
@@ -60,7 +60,7 @@ export default function Footer() {
           {/* Newsletter */}
           <div>
             <h5 className="text-white text-xs tracking-[0.3em] uppercase font-bold mb-8">{t("footer.newsletter")}</h5>
-            <p className="text-sm mb-6">{t("footer.newsletterDesc")}</p>
+            <p className="text-sm mb-6 text-justify">{t("footer.newsletterDesc")}</p>
             <form className="relative">
               <input
                 className="w-full bg-transparent border-b border-white/20 pb-2 text-sm focus:outline-none focus:border-primary transition-colors placeholder:text-neutral-500"
@@ -74,6 +74,10 @@ export default function Footer() {
           </div>
 
         </div>
+
+        <p className="text-center text-sm sm:text-base leading-relaxed py-12 sm:py-14 md:py-16 font-display italic text-white/90 max-w-3xl mx-auto px-2">
+          {t("footer.signoff")}
+        </p>
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase opacity-60">

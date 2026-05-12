@@ -26,13 +26,13 @@ export default function StoryCTA() {
 
       {/* Content */}
       <div ref={ref} className="relative z-10 text-center text-white px-4 sm:px-6 max-w-3xl mx-auto">
-        <p className={`reveal from-scale ${inView ? "in-view" : ""} text-primary tracking-[0.5em] uppercase text-[10px] sm:text-xs font-semibold mb-4`}>
+        <p className={`reveal from-scale ${inView ? "in-view" : ""} story-eyebrow mb-4`}>
           {t("cta.eyebrow")}
         </p>
-        <h2 className={`reveal reveal-delay-100 ${inView ? "in-view" : ""} font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight italic mb-6 sm:mb-8`}>
+        <h2 className={`reveal reveal-delay-100 ${inView ? "in-view" : ""} story-cta-title mb-6 sm:mb-8`}>
           {t("cta.title")}
         </h2>
-        <p className={`reveal reveal-delay-200 ${inView ? "in-view" : ""} text-white/60 text-sm sm:text-base mb-10 sm:mb-12 max-w-md mx-auto leading-relaxed`}>
+        <p className={`reveal reveal-delay-200 ${inView ? "in-view" : ""} story-cta-prose mb-10 sm:mb-12`}>
           {t("cta.desc")}
         </p>
         <div className={`reveal reveal-delay-300 ${inView ? "in-view" : ""} flex flex-col sm:flex-row items-center justify-center gap-4`}>

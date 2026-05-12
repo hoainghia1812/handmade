@@ -18,10 +18,10 @@ export default function StoryValues() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
         <div className={`reveal ${inView ? "in-view" : ""} mb-16 sm:mb-20`}>
-          <span className="text-primary tracking-[0.4em] uppercase text-[10px] sm:text-xs font-semibold block mb-4">
+          <span className="story-eyebrow block mb-4">
             {t("values.eyebrow")}
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic max-w-lg">
+          <h2 className="story-section-title max-w-lg">
             {t("values.title")}
           </h2>
         </div>
@@ -40,10 +40,10 @@ export default function StoryValues() {
 
               {/* Content */}
               <div className="space-y-3 sm:space-y-4">
-                <h3 className="font-display text-2xl sm:text-3xl md:text-4xl group-hover:text-primary transition-colors duration-300">
+                <h3 className="story-values-title group-hover:text-primary">
                   {t("values." + v.titleKey)}
                 </h3>
-                <p className="text-sm sm:text-base leading-relaxed opacity-70 max-w-xl">
+                <p className="story-body max-w-xl">
                   {t("values." + v.bodyKey)}
                 </p>
               </div>
